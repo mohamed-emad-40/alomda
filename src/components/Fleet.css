@@ -1,0 +1,122 @@
+.fleet { background: var(--gray-50); }
+
+.fleet-filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 9px 22px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #fff;
+  color: var(--gray-700);
+  border: 1.5px solid var(--border);
+  transition: all var(--transition);
+}
+.filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+.filter-btn.active {
+  background: var(--gold);
+  color: #fff;
+  border-color: var(--gold);
+  box-shadow: 0 4px 12px rgba(232,151,26,0.25);
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.fleet-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.fleet-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--gold-mid);
+}
+
+.fleet-img-area {
+  background: var(--gray-100);
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.fleet-emoji { font-size: 52px; }
+.avail-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.avail-badge.avail {
+  background: #E6F4EA;
+  color: #2E7D32;
+}
+.avail-badge.on-demand {
+  background: #FFF3DC;
+  color: var(--gold-dark);
+}
+
+.fleet-body { padding: 18px 16px; }
+.fleet-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+.fleet-brand {
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-bottom: 12px;
+}
+.fleet-capacity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+.cap-label { font-size: 11px; color: var(--gray-500); }
+.cap-val { font-size: 12px; font-weight: 700; color: var(--dark); }
+
+.fleet-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 9px;
+  background: var(--gold-light);
+  color: var(--gold-dark);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  transition: all var(--transition);
+}
+.fleet-btn:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+@media (max-width: 1024px) { .fleet-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .fleet-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .fleet-grid { grid-template-columns: 1fr; } }
